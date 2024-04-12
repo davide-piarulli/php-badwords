@@ -1,6 +1,8 @@
 <?php
 $testo = $_POST['paragrafo'];
+$parola = $_POST['parola'];
 $lunghezza_paragrafo = strlen($testo);
+$censura = str_replace($parola, '***', $testo);
 ?>
 
 
@@ -18,11 +20,11 @@ $lunghezza_paragrafo = strlen($testo);
     <h1>Dati Ricevuti</h1>
     <div>
       <h4>Il paragrafo ricevuto è lungo: <?php echo $lunghezza_paragrafo ?> ed è il seguente: </h4>
-      <textarea name="paragrafo" id="" cols="30" rows="10"><?php echo $testo ?></textarea>
+      <p><?php echo $testo ?></p>
     </div>
 
     <div>
-      <h4>La parola censurata è:</h4>
+      <h4>La parola censurata è: <?php echo $censura ?></h4>
       <p></p>
     </div>
   </div>
