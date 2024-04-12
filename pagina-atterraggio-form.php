@@ -1,4 +1,6 @@
 <?php
+
+
 $testo = $_POST['paragrafo'];
 $parola = $_POST['parola'];
 $lunghezza_paragrafo = strlen($testo);
@@ -24,7 +26,7 @@ $censura = str_replace($parola, '***', $testo);
     </div>
 
     <div>
-      <h4>La parola censurata è: <?php echo $censura ?></h4>
+      <h4>Testo con parola censurata : <?php echo $censura ?></h4>
       <p></p>
     </div>
   </div>
